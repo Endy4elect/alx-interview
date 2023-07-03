@@ -1,14 +1,11 @@
-# 0x00. Pascal's Triangle
-:open_file_folder: Specializations - Interview Preparation ― Algorithms  
-:bust_in_silhouette: By Alexa Orrico, Software Engineer at Holberton School  
-:copyright: **[Holberton School](https://www.holbertonschool.com/)**  
-:bookmark: python | quadratic time
+# Specializations
+## alx-interview
+### :copyright: **[Holberton School](https://www.holbertonschool.com/)**
 
-## Requirements
-* A ```README.md``` file.
-
-## Tasks
-* [x] 0. Pascal's Triangle
+## Projects
+:open_file_folder:
+* [x] 0x00. Pascal's Triangle
+* [x] 0x01. Lockboxes
 
 ## Software engineer
 [Nnamdi Udeh](https://www.Endy4elect.com)
