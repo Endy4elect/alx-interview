@@ -8,4 +8,5 @@
 * [x] 0x01. Lockboxes
 
 ## Software engineer
-[Nnamdi Udeh](https://www.Endy4elect.com)
+[Nnamdi Udeh]
+:octocat: [GitHub](https://github.com/Endy4elect/)
