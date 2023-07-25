@@ -9,7 +9,6 @@ Method that determines if a given data set represents a valid UTF-8 encoding.
 * to handle the 8 least significant bits of each integer
 """
 
-
 def validUTF8(data):
     """ UTF-8 Validation """
     bytesLong = 0
@@ -32,4 +31,3 @@ def validUTF8(data):
     if bytesLong == 0:
         return True
     return False
-
