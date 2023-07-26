@@ -11,25 +11,21 @@ Method that determines if a given data set represents a valid UTF-8 encoding.
 
 
 def validUTF8(data):
-    """ UTF-8 Validation """
-    bytesLong = 0
-    binaryMoveLeft7 = 1 << 7
-    binaryMoveLeft6 = 1 << 6
-    for byte in data:
-        binaryMove = 1 << 7
-        if bytesLong == 0:
-            while byte & binaryMove:
-                bytesLong += 1
-                binaryMove = binaryMove >> 1
-            if bytesLong == 0:
-                continue
-            if bytesLong == 1 or bytesLong > 4:
+    """validUTF8
+    Determines if a given data set represents a valid UTF-8 encoding.
+    """
+    valid = 0
+    for value in data:
+        byte = value & 255
+        if valid:
+            if byte >> 6 != 2:
                 return False
-        else:
-            if not (byte & binaryMoveLeft7 and not (byte & binaryMoveLeft6)):
-                return False
-        bytesLong -= 1
-    if bytesLong == 0:
-        return True
-    return False
+            valid -= 1
+            continue
+        while (1 << abs(7 - valid)) & byte:
+            valid += 1
+        if valid == 1 or valid > 4:
+            return False
+        valid = max(valid - 1, 0)
+    return valid == 0
 
